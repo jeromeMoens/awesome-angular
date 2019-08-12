@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { PublicModule } from '../public/public.module';
 import { ProtectedModule } from '../protected/protected.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FirebaseModule } from './modules/firebase.module';
 
 @NgModule({
   declarations: [NavbarComponent],
   imports: [
     CommonModule,
     PublicModule,
-    ProtectedModule
+    ProtectedModule,
+    FirebaseModule
   ],
   exports: [NavbarComponent]
 })

@@ -1,0 +1,7 @@
+<div class="row">
+  <app-planning-workday-item 
+  *ngFor="let workday of workdays$ | async"
+  [workday]="workday" 
+  class="col-md-4"> 
+  </app-planning-workday-item>
+</div>
