@@ -1,9 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PlanningComponent } from './planning/planning/planning.component';
+import { ProtectedComponent } from './protected.component';
 
 const routes: Routes = [
-  { path: 'planning', component: PlanningComponent }
+  {
+    path: 'app',
+    component: ProtectedComponent,
+    children: [
+      { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
+      { path: 'parameters', loadChildren: './parameters/parameters.module#ParametersModule' },
+      { path: 'planning', loadChildren: './planning/planning.module#PlanningModule' },
+      { path: 'profil', loadChildren: './profil/profil.module#ProfilModule' },
+      { path: 'workday', loadChildren: './workday/workday.module#WorkdayModule' }
+    ]
+  }
 ];
 
 @NgModule({

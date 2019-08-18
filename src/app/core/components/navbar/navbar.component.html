@@ -3,16 +3,16 @@
     <a class="navbar-brand">Awesome List</a>
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link">Accueil</a>
+        <li class="nav-item" [class.active]="isActive(homePath)">
+          <a class="nav-link" (click)="navigate(homePath)">Accueil</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link">Connexion</a>
+        <li class="nav-item" [class.active]="isActive(loginPath)">
+          <a class="nav-link" (click)="navigate(loginPath)">Connexion</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link">Inscription</a>
+        <li class="nav-item" [class.active]="isActive(registerPath)">
+          <a class="nav-link" (click)="navigate(registerPath)">Inscription</a>
         </li>
       </ul>
     </div>

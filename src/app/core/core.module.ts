@@ -4,16 +4,17 @@ import { PublicModule } from '../public/public.module';
 import { ProtectedModule } from '../protected/protected.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FirebaseModule } from './modules/firebase.module';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [NavbarComponent],
+  declarations: [NavbarComponent, PageNotFoundComponent],
   imports: [
     CommonModule,
     PublicModule,
     ProtectedModule,
     FirebaseModule
   ],
-  exports: [NavbarComponent]
+  exports: [NavbarComponent, PageNotFoundComponent]
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) { 
